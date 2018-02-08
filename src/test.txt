@@ -1,0 +1,14 @@
+1)		printMessage();
+
+2)		setName(String name);
+
+3)		getNumber();
+					
+					
+4) int random = rand.nextInt(999);
+
+   int random = rand.nextInt(899);
+   
+   int random = rand.nextInt(51);
+   random = random + 25;
+   

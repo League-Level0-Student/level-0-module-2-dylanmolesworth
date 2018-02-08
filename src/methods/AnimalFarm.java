@@ -18,9 +18,80 @@ AnimalFarm() {
 	 * 1. Ask the user which animal they want, then play the sound of that
 	 * animal.
 	 */
+	
+	boolean running = true;
+	
+
+	while (running) {
+		
+	
+	
+	String animal = JOptionPane.showInputDialog("What is you Favorite animal?(Cow, Duck, Dog)");
+	if(animal.equals("cow")) {
+		
+	JOptionPane.showMessageDialog(null, "Cow");
+	playMoo();
+		
+	}
+	
+	else if(animal.equals("duck")) {
+		
+		JOptionPane.showMessageDialog(null, "Duck");
+		playQuack();
+		
+	}
+
+	else if(animal.equals("dog")) {
+	
+		JOptionPane.showMessageDialog(null, "Dog");
+		playWoof();
+	
+	}
+	else if(animal.equals("cat")) {
+		
+		JOptionPane.showMessageDialog(null, "Cat");
+		playMeow();
+	
+	}
+	else if(animal.equals("llama")) {
+		
+		JOptionPane.showMessageDialog(null, "Llama");
+		playLlama();
+	
+	}
+else if(animal.equals("lama")) {
+		
+		JOptionPane.showMessageDialog(null, "Llama");
+		playLlama();
+	
+	}
+	else {
+		JOptionPane.showMessageDialog(null, "Invalid Command");
+		
+		
+	}
+	String input = JOptionPane.showInputDialog( "Would you like to keep playing?");
+	
+	if (input.equals("yes")) {
+		running = true;
+		
+	}
+	else if (input.equals("no")) {
+		running = false;
+		
+	}
+	
+	
+	
+	}
+}
+	
+	
+	
+	
+	
 
 	/* 2. Make it so that the user can keep entering new animals. */
-}
 
 void playMoo() {
 	playNoise(mooFile);
@@ -32,6 +103,14 @@ void playQuack() {
 
 void playWoof() {
 	playNoise(woofFile);
+}
+
+void playMeow() {
+	playNoise(meowFile);
+}
+
+void playLlama() {
+	playNoise(llamaFile);
 }
 
 String quackFile = "quack.wav";
@@ -56,6 +135,7 @@ public void playNoise(String soundFile) {
 
 public static void main(String[] args) {
 	new AnimalFarm();
+	
 }
 
 }
